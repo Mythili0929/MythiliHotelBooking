@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Functions</title>
+    <script>
+        // Factorial Function
+        function findFactorial() {
+            let num = document.getElementById("number").value;
+            let fact = 1;
+
+            if (num < 0) {
+                document.getElementById("result").innerHTML = "Factorial not possible";
+                return;
+            }
+
+            for (let i = 1; i <= num; i++) {
+                fact *= i;
+            }
+
+            document.getElementById("result").innerHTML = "Factorial = " + fact;
+        }
+
+        // Palindrome Function
+        function checkPalindrome() {
+            let num = document.getElementById("number").value;
+            let original = num;
+            let reverse = 0;
+
+            while (num > 0) {
+                let digit = num % 10;
+                reverse = reverse * 10 + digit;
+                num = Math.floor(num / 10);
+            }
+
+            if (original == reverse) {
+                document.getElementById("result").innerHTML = original + " is a Palindrome";
+            } else {
+                document.getElementById("result").innerHTML = original + " is not a Palindrome";
+            }
+        }
+
+        // Prime Function
+        function checkPrime() {
+            let num = document.getElementById("number").value;
+            let isPrime = true;
+
+            if (num <= 1) {
+                isPrime = false;
+            }
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                document.getElementById("result").innerHTML = num + " is a Prime Number";
+            } else {
+                document.getElementById("result").innerHTML = num + " is not a Prime Number";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Number Operations</h2>
+
+    Enter a number:
+    <input type="number" id="number"><br><br>
+
+    <button onclick="findFactorial()">Factorial</button>
+    <button onclick="checkPalindrome()">Palindrome</button>
+    <button onclick="checkPrime()">Prime</button>
+
+    <h3 id="result"></h3>
+</body>
+</html>

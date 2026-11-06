@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mythili's Online Hotel Room Booking Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Mythili's Hotel Booking</h1>
+        <p>Welcome! Book Your Comfortable Stay With Us.</p>
+    </header>
+
+    <main>
+
+        <section class="booking-container">
+
+            <h2>Online Hotel Room Booking</h2>
+
+            <form id="bookingForm" onsubmit="bookRoom(event)">
+
+                <label for="name">Customer Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="email">Email Address:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="room_type">Select Room Type:</label>
+                <select id="room_type" name="room_type" required>
+                    <option value="">-- Select Room --</option>
+                    <option value="Single">Single Room - ₹1000</option>
+                    <option value="Double">Double Room - ₹1800</option>
+                    <option value="Deluxe">Deluxe Room - ₹2500</option>
+                    <option value="Suite">Suite Room - ₹4000</option>
+                </select>
+
+                <label for="booking_date">Booking Date:</label>
+                <input
+                    type="date"
+                    id="booking_date"
+                    name="booking_date"
+                    required
+                >
+
+                <button type="submit">Book Room</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mythili's Hotel Booking Management System</p>
+        <p>Smart Booking | Comfortable Stay</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

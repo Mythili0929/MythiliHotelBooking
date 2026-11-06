@@ -1,0 +1,12 @@
+h1{
+    color: black;
+    text-align: center;
+}
+body{
+    color: rgb(15, 171, 109);
+    background-color: rgb(108, 34, 178);
+    text-align: center;
+    text-decoration:dashed ;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

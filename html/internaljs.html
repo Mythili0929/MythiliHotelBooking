@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Embedding Javascript in Body</h2>
+    <p id="internalOutput">Internal JS output will appear here</p>
+    <button onclick="internalFunction()">Run Internal TS</button><br><br>
+    <p id="externalOutput">external JS output will appear here</p>
+    <button onclick="externalFunction()">Run External TS</button><br><br>
+    <script>
+        function internalFunction(){
+            document.getElementById("internalOutput").innerHTML="Message from <b>Internal JavaScript</b>";
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
